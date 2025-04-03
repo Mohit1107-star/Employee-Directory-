@@ -33,25 +33,16 @@ The **Employee Management System** is a **Spring Boot REST API** that allows use
 
 ## 🛠️ Setup Instructions
 git clone https://github.com/your-username/employee-management-system.git
+<br>
 cd employee-management-system
 
 ## Configure Database (H2 or MySQL)
-By default, the project uses H2 Database (in-memory). To use MySQL, update src/main/resources/application.properties:
-
-# H2 Database (Default)
-spring.datasource.url=jdbc:h2:mem:employeedb
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=sa
-spring.datasource.password=
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-For MySQL, change it to:
-
-# MySQL Database
-spring.datasource.url=jdbc:mysql://localhost:3306/employeedb
-spring.datasource.username=root
-spring.datasource.password=yourpassword
-spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
-spring.jpa.hibernate.ddl-auto=update
+By default, the project uses H2 Database (in-memory). <br> To use MySQL, update src/main/resources/application.properties:
+spring.datasource.url=jdbc:mysql://localhost:3306/employeedb<br>
+spring.datasource.username=root<br>
+spring.datasource.password=yourpassword<br>
+spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect<br>
+spring.jpa.hibernate.ddl-auto=update<br>
 
 ---------------
 ## Build & Run the Application
