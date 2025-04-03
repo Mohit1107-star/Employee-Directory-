@@ -37,7 +37,8 @@ git clone https://github.com/your-username/employee-management-system.git
 cd employee-management-system
 
 ## Configure Database (H2 or MySQL)
-By default, the project uses H2 Database (in-memory). <br> To use MySQL, update src/main/resources/application.properties:
+*To use MySQL, update src/main/resources/application.properties:*
+
 spring.datasource.url=jdbc:mysql://localhost:3306/employeedb<br>
 spring.datasource.username=root<br>
 spring.datasource.password=yourpassword<br>
@@ -49,28 +50,25 @@ spring.jpa.hibernate.ddl-auto=update<br>
 
 Using Maven:
 
-mvn clean install
-mvn spring-boot:run
-Using IntelliJ IDEA / Eclipse:
+mvn clean install<br>
+mvn spring-boot:run<br>
 
-Open the project in your IDE.
-
-Run EmpManagementApplication.java (Spring Boot Main Class).
 --------------
 
 ## 📡 API Endpoints
-Method	Endpoint	Description
-POST	/api/emp/add	Add a new employee
-GET	/api/emp/{empId}	Get employee by ID
-PUT	/api/emp/update/{empId}	Update an employee
-DELETE	/api/emp/delete/{empId}	Delete an employee
-GET	/api/emp/search/{name}	Search employees by name
+
+Method	Endpoint	Description:
+
+POST	/api/emp/add	Add a new employee<br>
+GET	/api/emp/{empId}	Get employee by ID<br>
+PUT	/api/emp/update/{empId}	Update an employee<br>
+DELETE	/api/emp/delete/{empId}	Delete an employee<br>
+GET	/api/emp/search/{name}	Search employees by name<br>
 
 
 ## 📝 Example API Requests
 
-1️⃣ Add a New Employee
-
+1️⃣ Add a New Employee ->
 POST http://localhost:8080/api/emp/add
 Content-Type: application/json
 {
@@ -78,10 +76,10 @@ Content-Type: application/json
   "sal": 50000
 }
 
-2️⃣ Get Employee by ID
+2️⃣ Get Employee by ID ->
 GET http://localhost:8080/api/emp/1
 
-3️⃣ Update Employee
+3️⃣ Update Employee ->
 PUT http://localhost:8080/api/emp/update/1
 Content-Type: application/json
 {
@@ -89,10 +87,10 @@ Content-Type: application/json
   "sal": 55000
 }
 
-4️⃣ Delete Employee
+4️⃣ Delete Employee ->
 DELETE http://localhost:8080/api/emp/delete/1
 
-5️⃣ Search Employees by Name
+5️⃣ Search Employees by Name ->
 GET http://localhost:8080/api/emp/search/John
 
 🛡️ Error Handling
