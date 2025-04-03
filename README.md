@@ -12,7 +12,6 @@ The **Employee Management System** is a **Spring Boot REST API** that allows use
 ## 🚀 Features
 - ✅ **Create, Read, Update, Delete (CRUD) Employees**
 - ✅ **Search Employees by Name (Partial Match)**
-- ✅ **Soft Delete Support (Optional)**
 - ✅ **Exception Handling with Custom Errors**
 - ✅ **Spring Boot, Spring Data JPA, and H2 Database**
 
@@ -92,11 +91,6 @@ DELETE http://localhost:8080/api/emp/delete/1
 
 5️⃣ Search Employees by Name ->
 GET http://localhost:8080/api/emp/search/John
-
-🛡️ Error Handling
-HTTP Code	Error Message	Description
-404	Employee Not Found	If employee does not exist
-400	Employee Already Exists	If duplicate entry is found
 
 
 ## 📜 License
