@@ -1,0 +1,28 @@
+# Ignore Maven/Gradle dependencies
+target/
+*.jar
+*.war
+*.ear
+
+# Ignore IntelliJ IDEA, Eclipse, and VS Code settings
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+
+# Ignore logs, database files, and temporary files
+logs/
+*.log
+hs_err_pid*
+!src/main/resources/application*.properties
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore build tools
+node_modules/
+dist/
+build/
