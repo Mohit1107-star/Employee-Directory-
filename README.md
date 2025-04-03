@@ -32,17 +32,12 @@ The **Employee Management System** is a **Spring Boot REST API** that allows use
 ---
 
 ## 🛠️ Setup Instructions
-
-### **1️⃣ Clone the Repository**
-```sh
 git clone https://github.com/your-username/employee-management-system.git
 cd employee-management-system
-2️⃣ Configure Database (H2 or MySQL)
+
+## Configure Database (H2 or MySQL)
 By default, the project uses H2 Database (in-memory). To use MySQL, update src/main/resources/application.properties:
 
-properties
-Copy
-Edit
 # H2 Database (Default)
 spring.datasource.url=jdbc:h2:mem:employeedb
 spring.datasource.driverClassName=org.h2.Driver
@@ -51,21 +46,18 @@ spring.datasource.password=
 spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
 For MySQL, change it to:
 
-properties
-Copy
-Edit
 # MySQL Database
 spring.datasource.url=jdbc:mysql://localhost:3306/employeedb
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
 spring.jpa.hibernate.ddl-auto=update
-3️⃣ Build & Run the Application
+
+---------------
+## Build & Run the Application
+
 Using Maven:
 
-sh
-Copy
-Edit
 mvn clean install
 mvn spring-boot:run
 Using IntelliJ IDEA / Eclipse:
@@ -73,69 +65,55 @@ Using IntelliJ IDEA / Eclipse:
 Open the project in your IDE.
 
 Run EmpManagementApplication.java (Spring Boot Main Class).
+--------------
 
-📡 API Endpoints
+## 📡 API Endpoints
 Method	Endpoint	Description
 POST	/api/emp/add	Add a new employee
 GET	/api/emp/{empId}	Get employee by ID
 PUT	/api/emp/update/{empId}	Update an employee
 DELETE	/api/emp/delete/{empId}	Delete an employee
 GET	/api/emp/search/{name}	Search employees by name
-📝 Example API Requests
+
+
+## 📝 Example API Requests
+
 1️⃣ Add a New Employee
-http
-Copy
-Edit
+
 POST http://localhost:8080/api/emp/add
 Content-Type: application/json
-
 {
   "ename": "John Doe",
   "sal": 50000
 }
+
 2️⃣ Get Employee by ID
-http
-Copy
-Edit
 GET http://localhost:8080/api/emp/1
+
 3️⃣ Update Employee
-http
-Copy
-Edit
 PUT http://localhost:8080/api/emp/update/1
 Content-Type: application/json
-
 {
   "ename": "John Smith",
   "sal": 55000
 }
+
 4️⃣ Delete Employee
-http
-Copy
-Edit
 DELETE http://localhost:8080/api/emp/delete/1
+
 5️⃣ Search Employees by Name
-http
-Copy
-Edit
 GET http://localhost:8080/api/emp/search/John
+
 🛡️ Error Handling
 HTTP Code	Error Message	Description
 404	Employee Not Found	If employee does not exist
 400	Employee Already Exists	If duplicate entry is found
-🎯 Future Enhancements
-🔹 JWT Authentication (Spring Security)
 
-🔹 Soft Delete with active flag
 
-🔹 Pagination & Sorting
-
-🔹 Swagger API Documentation
-
-📜 License
+## 📜 License
 This project is open-source under the MIT License.
 
-🤝 Contributing
+## 🤝 Contributing
 Fork the repository.
 
 Create a new branch (feature-branch).
@@ -144,9 +122,9 @@ Commit your changes (git commit -m "Added new feature").
 
 Push to GitHub and create a Pull Request.
 
-🌟 Support
+## 🌟 Support
 If you like this project, give it a ⭐ on GitHub!
 
-Feel free to submit issues or contribute.
+**Feel free to submit issues or contribute.**
 
 🚀 Happy Coding! 🎯
